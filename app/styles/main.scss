@@ -6,6 +6,60 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/vendor/assets/font
 
 $epic-red: #ec303a;
 
+/*fonts*/
+@font-face {
+    font-family: 'LigatureSymbols';
+    src: url('LigatureSymbols-2.11.eot');
+    src: url('LigatureSymbols-2.11.eot?#iefix') format('embedded-opentype'),
+         url('LigatureSymbols-2.11.woff') format('woff'),
+         url('LigatureSymbols-2.11.ttf') format('truetype'),
+         url('LigatureSymbols-2.11.svg#LigatureSymbols') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.lsf {
+  font-family: 'LigatureSymbols';
+  -webkit-text-rendering: optimizeLegibility;
+  -moz-text-rendering: optimizeLegibility;
+  -ms-text-rendering: optimizeLegibility;
+  -o-text-rendering: optimizeLegibility;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -ms-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  -webkit-font-feature-settings: "liga" 1, "dlig" 1;
+  -moz-font-feature-settings: "liga=1, dlig=1";
+  -ms-font-feature-settings: "liga" 1, "dlig" 1;
+  -o-font-feature-settings: "liga" 1, "dlig" 1;
+  font-feature-settings: "liga" 1, "dlig" 1;
+}
+.lsf-icon:before {
+  content:attr(title);
+  margin-right:0.3em;
+  font-size:130%;
+  font-family: 'LigatureSymbols';
+  -webkit-text-rendering: optimizeLegibility;
+  -moz-text-rendering: optimizeLegibility;
+  -ms-text-rendering: optimizeLegibility;
+  -o-text-rendering: optimizeLegibility;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -ms-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  -webkit-font-feature-settings: "liga" 1, "dlig" 1;
+  -moz-font-feature-settings: "liga=1, dlig=1";
+  -ms-font-feature-settings: "liga" 1, "dlig" 1;
+  -o-font-feature-settings: "liga" 1, "dlig" 1;
+  font-feature-settings: "liga" 1, "dlig" 1;
+}
+/*end fonts*/
+
+
 body {
 	font-size: 24px !important;
 	font-family: "Lato", sans-serif;
@@ -101,13 +155,16 @@ section:nth-child(even) {
 		}
 		h4 {
 			font-style: italic;
-			margin-bottom: 0px;
 		}
 	}
 }
 
 section:nth-child(odd) {
 	background-color: #fff;
+	min-height: 500px;
+	h2 {
+		padding-left: 10%;
+	}
 	.red-line{
 		width: calc(90% - 550px);
 		float: right;
@@ -129,6 +186,17 @@ section:nth-child(odd) {
 	}
 }
 
+footer {
+	padding: 0;
+	h1 {
+		color: $epic-red;
+		font-size: 2em;
+		text-align: center;
+	}
+	a {
+		color: white;
+	}
+}
 
 
 .red-line {
@@ -150,3 +218,103 @@ section:nth-child(odd) {
 	border-radius: 30px;
 }
 
+.epicBtn{
+    background-color:#ec303a;   
+    border-radius:5px;
+    border-style:none;
+    display:block;
+    width:33.33%;
+    color:white;
+    font-weight:bold;
+    // line-height:2em;
+    // font-size:2em;
+    margin:50px auto 20px auto;
+}
+
+/* =======================================================
+   8.CONTACT-DESKTOP
+========================================================== */
+.contact-page {
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	padding-bottom:4%;
+	position: relative;
+	z-index: 8;
+	overflow:hidden;	
+	background-color:#FFF;
+}
+.contact-page .contact-wrapper {
+	width:99%;
+	margin:auto;
+	overflow:hidden;
+}
+
+/* =======================================================
+   8.CONTACT-MOBILE
+========================================================== */
+.contact-page {
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+/*	padding-bottom:4%;*/
+	position: relative;
+	z-index: 8;
+	overflow:hidden;	
+	background-color:#FFF;
+}
+.contact-page .contact-wrapper {
+	width:85%;
+	margin:auto;
+	overflow:hidden;
+	/*background-color:#3FC;*/
+}
+
+/* =======================================================
+   9.FOOTER-DESKTOP
+========================================================== */
+.footer-pg{
+	overflow: hidden;
+	padding-top:2%;
+	background-color:#232323;
+    color:white;
+    padding-bottom: 50px;
+}
+.footer-pg h6{
+    text-align:center;
+    width:100%;
+    font-size:16px;
+    padding:15px 0;
+}
+@media only screen and (min-width: 769px) {
+.lsf-icon:before {
+  content:attr(title);
+  margin-right:0.3em;
+  font-size:130%;
+}
+}
+.img-15{
+	width:15%;
+	height:15%;
+}
+    .center-box{
+	margin:0 auto;
+}
+    .text-bigger{
+	font-size:40px ;
+}
+
+@media screen and (max-width: 770px) {
+	section:nth-child(odd) {
+		.red-orb {
+			float: right;
+		}
+	}
+	section:nth-child(even) {
+		.red-orb {
+			margin-left: 0px;
+		}
+	}
+}
