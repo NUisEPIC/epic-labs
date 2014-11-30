@@ -31,6 +31,11 @@ h2 {
 	font-size: 2.5em;
 }
 
+h4 {
+	font-size: 1.5em;
+	color: white;
+}
+
 header, section, footer {
 	position: relative;
 	padding: 50px 0;
@@ -71,6 +76,11 @@ header, section, footer {
 	font-weight: 700;
 }
 
+.row {
+	p {
+		color:white;
+	}
+}
 section:nth-child(even) {
 	background-color: #333;
 	h2 {
@@ -91,7 +101,7 @@ section:nth-child(2) {
 }
 
 .red-line {
-	position: absolute;
+	// position: absolute;
 	top: 48%;
 	background-color: $epic-red;
 	height: 12px;
@@ -99,7 +109,7 @@ section:nth-child(2) {
 }
 
 .red-orb {
-	position: absolute;
+	position: relative;
 	top: -25px;
 	left: 100%;
 	margin-left: -10px;
