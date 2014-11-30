@@ -32,8 +32,12 @@ h2 {
 }
 
 h4 {
-	font-size: 1.5em;
+	font-size: 1.3em;
 	color: white;
+}
+
+h6 {
+	font-size: 1em;
 }
 
 header, section, footer {
@@ -76,11 +80,10 @@ header, section, footer {
 	font-weight: 700;
 }
 
-.row {
-	p {
-		color:white;
-	}
+.text-wrapper {
+	padding:10px 50px;
 }
+
 section:nth-child(even) {
 	background-color: #333;
 	h2 {
@@ -88,17 +91,45 @@ section:nth-child(even) {
 		text-align: right;
 		padding-right: 10%;
 	}
+	.red-line {
+		width: calc(90% - 550px);
+	}
+	.row {
+		p {
+			color:white;
+			line-height: 25px;
+		}
+		h4 {
+			font-style: italic;
+			margin-bottom: 0px;
+		}
+	}
 }
 
 section:nth-child(odd) {
 	background-color: #fff;
-}
-
-section:nth-child(2) {
-	.red-line {
+	.red-line{
 		width: calc(90% - 550px);
+		float: right;
+	}
+	.red-orb {
+		left:0;
+	}
+	.row {
+		p {
+			font-size: 0.65em;
+			color:black;
+			line-height:17px;
+		}
+		.red-text p {
+			color: $epic-red;
+			line-height: 12px;
+			font-style: italic;
+		}
 	}
 }
+
+
 
 .red-line {
 	// position: absolute;
